@@ -1,0 +1,97 @@
+/* 1. Variables de Color 🌸 */
+:root {
+    --rosa-pastel: #fff1f2;
+    --rosa-medio: #fbcfe8;
+    --rosa-fuerte: #f472b6;
+    --rosa-oscuro: #db2777;
+    --blanco: #ffffff;
+}
+
+/* 2. Configuración Global */
+body {
+    background-color: var(--rosa-pastel);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 3. La Tarjeta (Efecto Elevado) 📦 */
+.tarjeta {
+    background-color: var(--blanco);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(219, 39, 119, 0.1);
+    border-top: 10px solid var(--rosa-fuerte);
+    width: 100%;
+    max-width: 400px;
+    animation: aparecer 0.8s ease-out; /* Animación al cargar */
+}
+
+/* 4. Título e Inputs ✍️ */
+.titulo {
+    color: var(--rosa-oscuro);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.grupo {
+    margin-bottom: 20px;
+}
+
+.input-coquette {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--rosa-medio);
+    border-radius: 15px;
+    box-sizing: border-box; /* Importante para el ancho */
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.input-coquette:focus {
+    border-color: var(--rosa-fuerte);
+    box-shadow: 0 0 12px var(--rosa-medio);
+    outline: none;
+    transform: translateY(-2px); /* Se eleva un poquito al escribir */
+}
+
+/* 5. El Botón Animado 🪄 */
+.boton-magico {
+    background: linear-gradient(45deg, var(--rosa-fuerte), var(--rosa-oscuro));
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(244, 114, 182, 0.4);
+}
+
+.boton-magico:hover {
+    letter-spacing: 1px;
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(219, 39, 119, 0.5);
+}
+
+.boton-magico:active {
+    transform: scale(0.98);
+}
+
+/* 6. Animación de Entrada ✨ */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
