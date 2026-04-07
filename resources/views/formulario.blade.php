@@ -1,33 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Formulario Coquette 🎀</title>
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
-</head>
-<body class="contenedor-principal">
+@extends('layouts.app') 
 
-    <div class="tarjeta">
-        <h1 class="titulo">🌸HOLA USUARIO🌸</h1>
+@section('contenido')
+    <div style="background-color: #fff0f5; padding: 20px; border-radius: 15px;"> <h2>Formulario de Usuario</h2>
         
-        <form method="POST" action="/procesar" class="formulario">
-            @csrf
-            
-            <div class="grupo">
-                <label>Nombre:</label>
-                <input type="text" name="nombre" class="input-coquette" placeholder="Tu nombre..." required>
-            </div>
+        <form method="POST" action="/procesar">
+            @csrf <label>Nombre: </label>
+            <input type="text" name="nombre"> 
+            <br><br>
 
-            <div class="grupo">
-                <label>Edad:</label>
-                <input type="number" name="edad" class="input-coquette" placeholder="Tu edad..." required>
-            </div>
+            <label>Edad: </label>
+            <input type="number" name="edad"> 
+            <br><br>
 
-            <button type="submit" class="boton-magico">
-                Enviar Datos ✨
+            <label>Ocupación: </label>
+            <select name="ocupacion"> 
+                <option value="estudiante">Estudiante</option>
+                <option value="profesionista">Profesionista</option>
+                <option value="otro">Otro</option>
+            </select>
+            <br><br>
+
+            <button type="submit" style="background-color: #ff69b4; color: white; border: none; padding: 10px 20px; border-radius: 20px;">
+                Enviar ✨
             </button>
         </form>
     </div>
-
-</body>
-</html>
+@endsection

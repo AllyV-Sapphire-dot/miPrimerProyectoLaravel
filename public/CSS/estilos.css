@@ -1,97 +1,96 @@
-/* 1. Variables de Color 🌸 */
-:root {
-    --rosa-pastel: #fff1f2;
-    --rosa-medio: #fbcfe8;
-    --rosa-fuerte: #f472b6;
-    --rosa-oscuro: #db2777;
-    --blanco: #ffffff;
+/* Importamos fuentes bonitas */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;700&display=swap');
+
+body {
+    background-color: #fce4ec;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* 2. Configuración Global */
-body {
-    background-color: var(--rosa-pastel);
+/* Header: Arriba a la izquierda con letra bonita */
+header {
+    padding: 20px 40px;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #ad1457;
+    margin: 0;
+    font-size: 2.2rem;
+    text-align: left; /* Alineado a la izquierda */
+}
+
+/* Main: Contenedor central para el formulario */
+main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
 }
 
-/* 3. La Tarjeta (Efecto Elevado) 📦 */
-.tarjeta {
-    background-color: var(--blanco);
+/* El Formulario: Estilo "Emergente" y Limpio */
+.card {
+    background: white;
+    border-radius: 25px;
     padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(219, 39, 119, 0.1);
-    border-top: 10px solid var(--rosa-fuerte);
+    box-shadow: 0 15px 35px rgba(233, 30, 99, 0.15);
     width: 100%;
     max-width: 400px;
-    animation: aparecer 0.8s ease-out; /* Animación al cargar */
+    border: 1px solid #f8bbd0;
 }
 
-/* 4. Título e Inputs ✍️ */
-.titulo {
-    color: var(--rosa-oscuro);
-    text-align: center;
+.card h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #d81b60;
+    font-size: 2.5rem;
     margin-bottom: 30px;
-    font-size: 24px;
+    text-align: center;
 }
 
-.grupo {
-    margin-bottom: 20px;
-}
-
-.input-coquette {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid var(--rosa-medio);
-    border-radius: 15px;
-    box-sizing: border-box; /* Importante para el ancho */
-    transition: all 0.3s ease;
-    font-size: 16px;
-}
-
-.input-coquette:focus {
-    border-color: var(--rosa-fuerte);
-    box-shadow: 0 0 12px var(--rosa-medio);
-    outline: none;
-    transform: translateY(-2px); /* Se eleva un poquito al escribir */
-}
-
-/* 5. El Botón Animado 🪄 */
-.boton-magico {
-    background: linear-gradient(45deg, var(--rosa-fuerte), var(--rosa-oscuro));
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 25px;
-    width: 100%;
-    font-size: 18px;
+/* Footer: Abajo del formulario */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ad1457;
     font-weight: bold;
+}
+
+/* Estilos de los inputs para que no se vean simples */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #880e4f;
+    font-weight: 700;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 2px solid #f8bbd0;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+button {
+    width: 100%;
+    background: #f06292;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(244, 114, 182, 0.4);
+    transition: 0.3s;
 }
 
-.boton-magico:hover {
-    letter-spacing: 1px;
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(219, 39, 119, 0.5);
-}
-
-.boton-magico:active {
-    transform: scale(0.98);
-}
-
-/* 6. Animación de Entrada ✨ */
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+button:hover {
+    background: #ec407a;
+    transform: translateY(-2px);
 }
